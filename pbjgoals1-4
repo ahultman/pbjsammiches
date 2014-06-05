@@ -1,0 +1,52 @@
+# We're have a pb & j party! How many sammiches can I make, Pythyon?
+#Goal 1: Determine if I have supplies to make sandwiches.
+bread = 11
+peanut_butter = 8
+#jelly = 9
+jelly = 0 
+
+print "GOAL 1! MAKE A SANDWICH!"
+
+print "I have {0} slices of bread, {1} servings of peanut butter and {2} servings of jelly. Can I make sammiches?".format(bread, peanut_butter, jelly)
+if bread >= 2 and peanut_butter >= 1 and jelly >= 1:
+	print "We can make sammiches!"
+
+
+elif bread < 2 or peanut_butter < 1 or jelly < 1:
+	print "Time to go to the store! Drink a beer instead."
+
+#Goal 2: Find out how many sammiches we can make.
+
+print "GOAL 2 TIME! MORE SANDWICHES!"
+
+print "To make a sammich, we'll need at least 2 slices of bread, a serving of jelly and a serving of peanut butter. Let's see how many sammiches we can make."
+bread_amt = bread / 2
+sammich_number = min(bread_amt, peanut_butter, jelly)
+print "You can make {0} sammiches.".format(sammich_number)
+
+#Goal 3: How many open-faced sammiches can you make?
+
+print "GOAL 3! ATTACK OF THE KILLER SANDWICHES!"
+
+print "To make an open-faced sammich, you need only one slice of bread, one serving of peanut butter and one serving of jelly. How many sammiches can you make now?"
+if bread%2==0:#
+ 	print "No bread for open-faced sammiches is available."
+
+elif bread%2==1:
+ 	print "You have enough bread for one open-faced sammich!"
+
+#Goal 4: Determine if you need more ingredients.
+
+print "GOAL 4! LADIEZ BE GROCERY SHOPPIN'!"
+Enough_bread = bread >= 2
+Enough_jelly = jelly >= 1
+Enough_peanutbutter = peanut_butter >= 1
+
+if not Enough_bread:
+	print "You need to go shoppin' for more bread!"
+if not Enough_jelly:
+	print "You need to go shoppin' for more jelly."
+if not Enough_peanutbutter:
+	print "You need to go shoppin' for more peanut butter."
+
+	
